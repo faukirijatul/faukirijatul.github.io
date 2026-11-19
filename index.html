@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020617" />
+    <title>Fauki Rijatul H - Software Engineer</title>
+    <meta
+      name="description"
+      content="Fauki Rijatul H - Software Engineer specializing in React.js, Next.js, and Express.js."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/images/logofauki.svg" />
+    <link rel="apple-touch-icon" href="assets/images/logofauki.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: Inter, Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        font-family: var(--font-sans);
+      }
+
+      dialog::backdrop {
+        background: rgb(2 6 23 / 70%);
+        backdrop-filter: blur(4px);
+      }
+
+      dialog[open] {
+        animation: dialog-in 160ms ease-out;
+      }
+
+      @keyframes dialog-in {
+        from {
+          opacity: 0;
+          transform: translate(-50%, calc(-50% + 8px));
+        }
+        to {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen bg-slate-950 font-sans text-slate-100 antialiased selection:bg-indigo-500 selection:text-white"
+  >
+    <header
+      class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md"
+    >
+      <div
+        class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 xl:px-0"
+      >
+        <a href="#" class="flex items-center gap-3">
+          <img
+            src="assets/images/fauki-logo.svg"
+            alt="Fauki Rijatul H Logo"
+            class="h-9 w-9 rounded-full bg-white object-contain"
+          />
+          <span
+            class="text-xl font-bold tracking-tight text-white transition-colors hover:text-sky-400"
+            >FRH<span class="text-blue-500">.</span></span
+          >
+        </a>
+
+        <nav
+          class="hidden h-full items-center space-x-6 md:flex"
+          aria-label="Main navigation"
+        >
+          <a
+            data-nav-link
+            href="#services"
+            class="relative flex h-full items-center px-1 text-sm font-medium transition-colors text-slate-400 hover:text-slate-200"
+            >Services</a
+          >
+          <a
+            data-nav-link
+            href="#expertise"
+            class="relative flex h-full items-center px-1 text-sm font-medium transition-colors text-slate-400 hover:text-slate-200"
+            >Expertise</a
+          >
+          <a
+            data-nav-link
+            href="#projects"
+            class="relative flex h-full items-center px-1 text-sm font-medium transition-colors text-slate-400 hover:text-slate-200"
+            >Projects</a
+          >
+          <a
+            data-nav-link
+            href="#experience"
+            class="relative flex h-full items-center px-1 text-sm font-medium transition-colors text-slate-400 hover:text-slate-200"
+            >Experience</a
+          >
+        </nav>
+
+        <div class="flex items-center md:hidden">
+          <button
+            id="menu-toggle"
+            type="button"
+            class="rounded-lg p-2.5 text-slate-300 hover:bg-slate-900 hover:text-white"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <i data-lucide="menu" class="h-6 w-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <nav
+        id="mobile-menu"
+        class="hidden border-b border-slate-800 bg-slate-900 px-6 py-5 md:hidden"
+        aria-label="Mobile navigation"
+      >
+        <div class="flex flex-col space-y-2">
+          <a
+            data-mobile-link
+            href="#services"
+            class="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white"
+            ><span>Services</span></a
+          >
+          <a
+            data-mobile-link
+            href="#expertise"
+            class="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white"
+            ><span>Expertise</span></a
+          >
+          <a
+            data-mobile-link
+            href="#projects"
+            class="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white"
+            ><span>Projects</span></a
+          >
+          <a
+            data-mobile-link
+            href="#experience"
+            class="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white"
+            ><span>Experience</span></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden py-20 xl:py-16"
+      >
+        <div
+          class="mx-auto flex w-full max-w-6xl flex-col-reverse items-center justify-between gap-12 px-4 lg:flex-row lg:gap-16 xl:px-0"
+        >
+          <div class="flex-1 text-center lg:text-left">
+            <p
+              class="text-sm font-semibold tracking-wide text-sky-400 uppercase md:text-base"
+            >
+              Hello! I'm
+            </p>
+            <h2 class="mt-1 text-2xl font-bold text-slate-200 md:text-3xl">
+              Fauki Rijatul H
+            </h2>
+            <h1
+              class="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl lg:leading-tight"
+            >
+              Software Engineer
+            </h1>
+            <p
+              id="about-text"
+              class="mt-5 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg"
+            ></p>
+
+            <div
+              class="mt-8 flex flex-wrap items-center justify-center gap-4 lg:justify-start"
+            >
+              <a
+                href="https://wa.me/6287845352397"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:bg-blue-500 hover:shadow-blue-500/40"
+              >
+                Hire Me <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </a>
+              <a
+                href="https://docs.google.com/document/d/1LT2cfEXHMclTYSuzDeL12Ouym92rz_zX/edit?usp=sharing&ouid=116329276779794226930&rtpof=true&sd=true"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex items-center gap-2 rounded-xl border border-slate-800/80 bg-slate-900/40 px-6 py-3.5 text-sm font-semibold text-slate-200 backdrop-blur-sm transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-900/80 hover:text-white"
+              >
+                <i data-lucide="file-text" class="h-4 w-4 text-sky-400"></i>
+                Resume
+              </a>
+            </div>
+          </div>
+
+          <div class="relative flex items-center justify-center">
+            <div
+              class="relative flex h-80 w-[320px] items-center justify-center rounded-full border border-slate-800 bg-slate-900 shadow-2xl sm:h-100 sm:w-100 lg:h-112.5 lg:w-112.5"
+            >
+              <div
+                class="absolute inset-0 rounded-full border-12 border-sky-500/15"
+              ></div>
+              <div
+                class="h-65 w-65 rounded-full bg-linear-to-tr from-blue-600 to-cyan-500 opacity-90 sm:h-82.5 sm:w-82.5 lg:h-92.5 lg:w-92.5"
+              ></div>
+              <img
+                src="assets/images/fauki-profile.png"
+                alt="Fauki Rijatul H"
+                class="absolute bottom-0 h-95 w-auto max-w-none object-contain drop-shadow-2xl sm:h-120 lg:h-132.5"
+              />
+
+              <div
+                class="absolute -bottom-5 z-10 flex items-center gap-3 rounded-full border border-slate-800 bg-slate-900/90 px-6 py-3 shadow-2xl backdrop-blur-md"
+              >
+                <span
+                  class="text-xs font-bold tracking-wider text-slate-400 uppercase"
+                  >Follow me on :</span
+                >
+                <div class="flex items-center space-x-2 text-slate-300">
+                  <a
+                    href="https://linkedin.com/in/faukirijatulh"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="rounded-full p-1.5 transition-colors hover:bg-slate-800 hover:text-sky-400"
+                    aria-label="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in h-4 w-4"></i
+                  ></a>
+                  <a
+                    href="https://github.com/faukirijatul"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="rounded-full p-1.5 transition-colors hover:bg-slate-800 hover:text-sky-400"
+                    aria-label="GitHub"
+                    ><i class="fa-brands fa-github h-4 w-4"></i
+                  ></a>
+                  <a
+                    href="https://instagram.com/faukirhhh"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="rounded-full p-1.5 transition-colors hover:bg-slate-800 hover:text-sky-400"
+                    aria-label="Instagram"
+                    ><i class="fa-brands fa-instagram h-4 w-4"></i
+                  ></a>
+                  <a
+                    href="https://wa.me/6287845352397"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="rounded-full p-1.5 transition-colors hover:bg-slate-800 hover:text-sky-400"
+                    aria-label="WhatsApp"
+                    ><i class="fa-brands fa-whatsapp h-4 w-4"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="relative py-20">
+        <div class="mx-auto max-w-6xl px-4 xl:px-0">
+          <div class="mb-14">
+            <div class="flex items-center gap-2">
+              <span class="h-0.5 w-6 bg-sky-400"></span
+              ><span
+                class="text-xs font-semibold tracking-widest text-sky-400 uppercase"
+                >SERVICES</span
+              >
+            </div>
+            <h2
+              class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+            >
+              <span class="text-blue-500">What</span> I do
+            </h2>
+            <p class="mt-2 max-w-2xl text-base text-slate-400">
+              Delivering high-quality web solutions using modern technologies
+              and engineering best practices.
+            </p>
+          </div>
+          <div
+            id="services-grid"
+            class="grid grid-cols-1 gap-6 md:grid-cols-2"
+          ></div>
+        </div>
+      </section>
+
+      <section id="expertise" class="relative py-20">
+        <div class="mx-auto max-w-6xl px-4 xl:px-0">
+          <div class="mb-14">
+            <div class="flex items-center gap-2">
+              <span class="h-0.5 w-6 bg-sky-400"></span
+              ><span
+                class="text-xs font-semibold tracking-widest text-sky-400 uppercase"
+                >TECH STACK</span
+              >
+            </div>
+            <h2
+              class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+            >
+              <span class="text-blue-500">My</span> Expertise
+            </h2>
+            <p class="mt-2 max-w-2xl text-base text-slate-400">
+              A comprehensive list of programming languages, frameworks,
+              libraries, databases, and tools I use to deliver modern web
+              solutions.
+            </p>
+          </div>
+          <div
+            id="skills-grid"
+            class="flex flex-wrap justify-center gap-6 rounded-2xl border border-slate-800/80 p-6"
+          ></div>
+        </div>
+      </section>
+
+      <section id="projects" class="relative bg-slate-950/50 py-20">
+        <div class="mx-auto max-w-6xl px-4 xl:px-0">
+          <div class="mb-14">
+            <div class="flex items-center gap-2">
+              <span class="h-0.5 w-6 bg-sky-400"></span
+              ><span
+                class="text-xs font-semibold tracking-widest text-sky-400 uppercase"
+                >PORTFOLIO</span
+              >
+            </div>
+            <h2
+              class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+            >
+              <span class="text-blue-500">Featured</span> Projects
+            </h2>
+            <p class="mt-2 max-w-2xl text-base text-slate-400">
+              A showcase of my recent work and projects. Click on a project to
+              see more details.
+            </p>
+          </div>
+          <div
+            id="projects-grid"
+            class="grid grid-cols-1 gap-8 md:grid-cols-2"
+          ></div>
+        </div>
+      </section>
+
+      <section id="experience" class="relative py-20">
+        <div class="mx-auto max-w-6xl px-4 xl:px-0">
+          <div class="mb-14">
+            <div class="flex items-center gap-2">
+              <span class="h-0.5 w-6 bg-sky-400"></span
+              ><span
+                class="text-xs font-semibold tracking-widest text-sky-400 uppercase"
+                >TIMELINE</span
+              >
+            </div>
+            <h2
+              class="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+            >
+              <span class="text-blue-500">Professional</span> Experience
+            </h2>
+            <p class="mt-2 max-w-2xl text-base text-slate-400">
+              A chronicle of my professional journey, illustrating the roles,
+              responsibilities, and key accomplishments in my software
+              engineering career.
+            </p>
+          </div>
+          <div
+            id="experience-list"
+            class="relative ml-4 space-y-10 border-l border-slate-800/80 pl-8 md:ml-0 md:pl-10"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="relative mt-16 overflow-hidden border-t border-slate-800 bg-slate-950/80"
+    >
+      <div
+        class="pointer-events-none absolute bottom-0 left-1/2 -z-10 h-125 w-125 -translate-x-1/2 rounded-full bg-blue-600/10 blur-[120px]"
+      ></div>
+      <div
+        class="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-4 py-12 text-slate-400 md:grid-cols-4 xl:px-0"
+      >
+        <div class="flex flex-col gap-4">
+          <a href="#" class="flex items-center gap-3">
+            <img
+              src="assets/images/fauki-logo.svg"
+              alt="Fauki Rijatul H Logo"
+              class="h-10 w-10"
+            />
+            <span
+              class="text-3xl font-extrabold tracking-tight text-white transition-colors hover:text-sky-400"
+              >FRH<span class="text-blue-500">.</span></span
+            >
+          </a>
+          <p class="max-w-xs text-sm leading-relaxed">
+            Software Engineer focused on building innovative, high-performance
+            web experiences using modern technologies.
+          </p>
+          <div class="mt-4 flex flex-wrap items-center gap-2">
+            <a
+              href="https://linkedin.com/in/faukirijatulh"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded-full border border-slate-800/80 bg-slate-900/60 p-2.5 backdrop-blur-sm transition-colors hover:border-sky-500/30 hover:text-sky-400"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in h-5 w-5"></i
+            ></a>
+            <a
+              href="https://github.com/faukirijatul"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded-full border border-slate-800/80 bg-slate-900/60 p-2.5 backdrop-blur-sm transition-colors hover:border-sky-500/30 hover:text-sky-400"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github h-5 w-5"></i
+            ></a>
+            <a
+              href="https://instagram.com/faukirhhh"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded-full border border-slate-800/80 bg-slate-900/60 p-2.5 backdrop-blur-sm transition-colors hover:border-sky-500/30 hover:text-sky-400"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram h-5 w-5"></i
+            ></a>
+            <a
+              href="https://wa.me/6287845352397"
+              target="_blank"
+              rel="noreferrer"
+              class="rounded-full border border-slate-800/80 bg-slate-900/60 p-2.5 backdrop-blur-sm transition-colors hover:border-sky-500/30 hover:text-sky-400"
+              aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp h-5 w-5"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h4
+            class="flex items-center gap-2.5 text-xs font-semibold tracking-widest text-sky-400 uppercase"
+          >
+            QUICK LINKS
+          </h4>
+          <ul class="flex flex-col gap-2.5">
+            <li>
+              <a
+                href="#services"
+                class="group flex items-center gap-2.5 text-sm transition-colors hover:text-white"
+                ><i
+                  data-lucide="arrow-right"
+                  class="h-3.5 w-3.5 text-slate-600 transition-colors group-hover:text-sky-400"
+                ></i
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#expertise"
+                class="group flex items-center gap-2.5 text-sm transition-colors hover:text-white"
+                ><i
+                  data-lucide="arrow-right"
+                  class="h-3.5 w-3.5 text-slate-600 transition-colors group-hover:text-sky-400"
+                ></i
+                >Expertise</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="group flex items-center gap-2.5 text-sm transition-colors hover:text-white"
+                ><i
+                  data-lucide="arrow-right"
+                  class="h-3.5 w-3.5 text-slate-600 transition-colors group-hover:text-sky-400"
+                ></i
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                class="group flex items-center gap-2.5 text-sm transition-colors hover:text-white"
+                ><i
+                  data-lucide="arrow-right"
+                  class="h-3.5 w-3.5 text-slate-600 transition-colors group-hover:text-sky-400"
+                ></i
+                >Experience</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h4
+            class="text-xs font-semibold tracking-widest text-sky-400 uppercase"
+          >
+            CONNECT
+          </h4>
+          <div class="space-y-4">
+            <a
+              href="mailto:faukirijatu42@gmail.com"
+              class="group relative block rounded-2xl border border-slate-800/80 bg-slate-900/40 p-3 backdrop-blur-sm transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-900/80 hover:shadow-xl hover:shadow-blue-500/5"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-800 bg-slate-950/80 transition-colors group-hover:border-sky-500/30"
+                >
+                  <i data-lucide="mail" class="h-5 w-5 text-sky-400"></i>
+                </div>
+                <div>
+                  <h5 class="text-sm font-semibold text-white">Email</h5>
+                  <p class="text-xs">faukirijatu42@gmail.com</p>
+                </div>
+              </div>
+              <div
+                class="absolute top-4 right-4 text-slate-700 opacity-0 transition-opacity group-hover:text-sky-400 group-hover:opacity-100"
+              >
+                <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </div>
+            </a>
+            <a
+              href="https://linkedin.com/in/faukirijatulh"
+              target="_blank"
+              rel="noreferrer"
+              class="group relative block rounded-2xl border border-slate-800/80 bg-slate-900/40 p-3 backdrop-blur-sm transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-900/80 hover:shadow-xl hover:shadow-blue-500/5"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-800 bg-slate-950/80 transition-colors group-hover:border-sky-500/30"
+                >
+                  <i class="fa-brands fa-linkedin-in h-5 w-5 text-sky-400"></i>
+                </div>
+                <div>
+                  <h5 class="text-sm font-semibold text-white">LinkedIn</h5>
+                  <p class="text-xs">linkedin.com/in/faukirijatulh</p>
+                </div>
+              </div>
+              <div
+                class="absolute top-4 right-4 text-slate-700 opacity-0 transition-opacity group-hover:text-sky-400 group-hover:opacity-100"
+              >
+                <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 md:col-span-1">
+          <h4
+            class="flex items-center gap-2 text-xs font-semibold tracking-widest text-sky-400 uppercase"
+          >
+            GET IN TOUCH
+          </h4>
+          <div class="space-y-4">
+            <div
+              class="group rounded-2xl border border-slate-800/80 bg-slate-900/40 p-6 backdrop-blur-sm transition-colors hover:border-sky-500/30 hover:bg-slate-900/80"
+            >
+              <div class="flex items-center gap-3">
+                <i data-lucide="layers-3" class="h-5 w-5 text-sky-400"></i>
+                <h5 class="text-sm font-semibold text-white">Hire Me</h5>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed">
+                Let's talk about your next web project and how I can help.
+              </p>
+              <a
+                href="https://wa.me/6287845352397"
+                target="_blank"
+                rel="noreferrer"
+                class="mt-4 flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-xs font-semibold text-white transition-all hover:bg-blue-500"
+                >Contact via WhatsApp
+                <i data-lucide="send" class="h-3.5 w-3.5"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mx-auto max-w-6xl border-t border-slate-800/80 px-6 py-6 text-center text-sm text-slate-500"
+      >
+        © <span id="current-year"></span> Fauki Rijatul H. All rights reserved.
+      </div>
+    </footer>
+
+    <dialog
+      id="project-dialog"
+      class="fixed top-1/2 left-1/2 z-50 max-h-[90vh] w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-2xl border border-slate-800 bg-slate-900 p-6 text-slate-100 shadow-2xl"
+    >
+      <button
+        id="dialog-close"
+        type="button"
+        class="absolute top-4 right-4 rounded-full p-2 text-slate-400 transition-colors outline-none hover:bg-slate-800 hover:text-white"
+        aria-label="Close project details"
+      >
+        <i data-lucide="x" class="h-5 w-5"></i>
+      </button>
+      <div id="dialog-body"></div>
+    </dialog>
+
+    <script>
+      const currentYear = new Date().getFullYear();
+      const professionalYears = currentYear - 2020;
+      document.getElementById("current-year").textContent = currentYear;
+      document.getElementById("about-text").textContent =
+        `"With over ${professionalYears} years of experience specializing in building scalable web applications using React.js, Next.js, and Node.js, bringing a full-stack perspective to turn complex requirements into clean, high-impact digital products."`;
+
+      const services = [
+        {
+          number: "01",
+          title: "Frontend Development",
+          description:
+            "Building high-performance, interactive, and responsive web applications with server-side rendering, global state management, and modern data-fetching techniques.",
+          tags: [
+            "JavaScript",
+            "TypeScript",
+            "React JS",
+            "Next JS",
+            "Redux Toolkit",
+            "Zustand",
+            "React Query",
+            "SWR",
+            "Chart JS",
+          ],
+          icon: "code-2",
+        },
+        {
+          number: "02",
+          title: "Mobile App Development",
+          description:
+            "Building cross-platform mobile applications for iOS and Android using a single codebase, with native-like performance and smooth user experiences.",
+          tags: ["React Native", "Expo", "Ionic"],
+          icon: "smartphone",
+        },
+        {
+          number: "03",
+          title: "UI/UX Implementation",
+          description:
+            "Converting Figma designs into pixel-perfect, accessible, and clean user interfaces using utility-first styling and headless UI component systems.",
+          tags: ["Tailwind CSS", "Bootstrap", "Radix UI", "Shadcn UI", "Figma"],
+          icon: "layout",
+        },
+        {
+          number: "04",
+          title: "Backend Development",
+          description:
+            "Architecting robust, secure REST APIs and real-time backend services using server-side JavaScript frameworks and Object-Relational Mapping tools.",
+          tags: [
+            "Node.js",
+            "Express.js",
+            "Socket.io",
+            "Prisma",
+            "Sequelize",
+            "Mongoose",
+          ],
+          icon: "server",
+        },
+        {
+          number: "05",
+          title: "Database Architecture & Caching",
+          description:
+            "Designing relational and NoSQL database schemas, optimizing complex SQL/NoSQL queries, and implementing high-speed caching layers.",
+          tags: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQL"],
+          icon: "database",
+        },
+        {
+          number: "06",
+          title: "Software Testing & Quality Assurance",
+          description:
+            "Ensuring application stability, reliability, and regression testing with automated unit tests, component validation, and integration tests.",
+          tags: ["Jest", "Vitest", "React Testing Library"],
+          icon: "layers",
+        },
+        {
+          number: "07",
+          title: "Developer Tools & Workflow",
+          description:
+            "Managing collaborative development workflows, version control systems, API testing, agile project management, and workspace configurations.",
+          tags: ["Git", "GitHub", "Jira", "Postman", "VS Code"],
+          icon: "wrench",
+        },
+      ];
+
+      const skillIcon = (name, url) => ({ name, icon: url });
+      const devicon = (name, icon) =>
+        skillIcon(
+          name,
+          `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}`,
+        );
+      const skills = [
+        {
+          category: "Languages",
+          skills: [
+            devicon("JavaScript", "javascript/javascript-original.svg"),
+            devicon("TypeScript", "typescript/typescript-original.svg"),
+            skillIcon("SQL", "assets/icons/sql.svg"),
+          ],
+        },
+        {
+          category: "Frontend Frameworks & Libraries",
+          skills: [
+            devicon("React JS", "react/react-original.svg"),
+            devicon("Next JS", "nextjs/nextjs-original.svg"),
+            skillIcon("React Query", "assets/icons/react-query.svg"),
+            skillIcon("SWR", "assets/icons/swr.svg"),
+            skillIcon("Chart JS", "assets/icons/chart-js.svg"),
+          ],
+        },
+        {
+          category: "Mobile App Development",
+          skills: [
+            devicon("React Native", "react/react-original.svg"),
+            devicon("Expo", "expo/expo-original.svg"),
+            devicon("Ionic", "ionic/ionic-original.svg"),
+          ],
+        },
+        {
+          category: "Styling & UI Components",
+          skills: [
+            devicon("Tailwind CSS", "tailwindcss/tailwindcss-original.svg"),
+            devicon("Bootstrap", "bootstrap/bootstrap-original.svg"),
+            skillIcon("Radix UI", "assets/icons/radix-ui.svg"),
+            skillIcon("Shadcn UI", "assets/icons/shadcn-ui-light.svg"),
+          ],
+        },
+        {
+          category: "State Management",
+          skills: [
+            devicon("Redux Toolkit", "redux/redux-original.svg"),
+            skillIcon("Zustand", "assets/icons/zustand.svg"),
+          ],
+        },
+        {
+          category: "Backend & Databases",
+          skills: [
+            devicon("Node.js", "nodejs/nodejs-original.svg"),
+            devicon("Express.js", "express/express-original.svg"),
+            devicon("PostgreSQL", "postgresql/postgresql-original.svg"),
+            devicon("MySQL", "mysql/mysql-original.svg"),
+            devicon("MongoDB", "mongodb/mongodb-original.svg"),
+            devicon("Redis", "redis/redis-original.svg"),
+            devicon("Socket.io", "socketio/socketio-original.svg"),
+            skillIcon("Mongoose", "assets/icons/mongoose.svg"),
+            devicon("Sequelize", "sequelize/sequelize-original.svg"),
+            devicon("Prisma", "prisma/prisma-original.svg"),
+          ],
+        },
+        {
+          category: "Testing & Tools",
+          skills: [
+            devicon("Jest", "jest/jest-plain.svg"),
+            devicon("Vitest", "vitest/vitest-original.svg"),
+            skillIcon(
+              "React Testing Library",
+              "assets/icons/react-testing-library.svg",
+            ),
+            devicon("Git", "git/git-original.svg"),
+            devicon("GitHub", "github/github-original.svg"),
+            devicon("Jira", "jira/jira-original.svg"),
+            devicon("Figma", "figma/figma-original.svg"),
+            devicon("VS Code", "vscode/vscode-original.svg"),
+          ],
+        },
+      ];
+
+      const projects = [
+        {
+          id: "koding-up",
+          title: "Koding Up - CMS",
+          description:
+            "A web-based Content Management System for Learning Management Systems to manage digital learning, including live class scheduling, assignments, automated attendance, and course materials efficiently.",
+          image: "assets/projects/koding-up.webp",
+          techStack: [
+            "React JS",
+            "TypeScript",
+            "Radix UI",
+            "Tailwind CSS",
+            "React Query",
+            "Vitest",
+            "React Testing Library",
+          ],
+          demoLink: "",
+          githubLink: "https://github.com/faukirijatul/kodingup-cms.git",
+        },
+        {
+          id: "legalize",
+          title: "Legal-ize",
+          description:
+            "A Jira-style internal compliance task management platform for compliance officers and interns to assign, track, and update tasks related to Indonesian financial laws and central bank regulations.",
+          image: "assets/projects/legalize.webp",
+          techStack: [
+            "Next JS",
+            "TypeScript",
+            "Radix UI",
+            "Tailwind CSS",
+            "Zustand",
+            "SWR",
+            "Socket.io",
+          ],
+          demoLink: "",
+          githubLink: "",
+        },
+        {
+          id: "erm",
+          title: "Enterprise Risk Management System",
+          description:
+            "An Enterprise Risk Management (ERM) web application to identify, evaluate, and mitigate organizational risks through comprehensive modules for process tracking, control mapping, cause-and-consequence analysis, risk assessment, event monitoring, and automated action planning.",
+          image: "assets/projects/erm.webp",
+          techStack: [
+            "Next JS",
+            "TypeScript",
+            "Radix UI",
+            "Tailwind CSS",
+            "Zustand",
+            "SWR",
+          ],
+          demoLink: "",
+          githubLink: "",
+        },
+        {
+          id: "hi-kasir",
+          title: "Hi-Kasir",
+          description:
+            "A POS (Point of Sale) application integrated with an Indonesian state-owned digital bank, featuring comprehensive management tools and intuitive data visualizations.",
+          image: "assets/projects/hi-kasir.webp",
+          techStack: [
+            "React JS",
+            "TypeScript",
+            "Tailwind CSS",
+            "React Query",
+            "Chart JS",
+          ],
+          demoLink: "",
+          githubLink: "",
+        },
+        {
+          id: "doc-duit",
+          title: "DocDuit",
+          description:
+            "A financial consultation web application integrated with AI",
+          image: "assets/projects/doc-duit.webp",
+          techStack: [
+            "Next JS",
+            "TypeScript",
+            "Radix UI",
+            "Tailwind CSS",
+            "React Query",
+          ],
+          demoLink: "",
+          githubLink: "",
+        },
+        {
+          id: "toko-baju",
+          title: "TokoBaju - E-Commerce",
+          description:
+            "An online clothing store offering a wide selection of trendy fashion, integrated with a payment gateway for fast, secure, and seamless transactions.",
+          image: "assets/projects/toko-baju.webp",
+          techStack: [
+            "React JS",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "Stripe",
+            "Express JS",
+            "MongoDB",
+          ],
+          demoLink: "",
+          githubLink: "",
+        },
+        {
+          id: "fauki-blog",
+          title: "Personal Blog",
+          description:
+            "A full-stack personal blog designed to publish articles, showcase portfolios, and manage content seamlessly with a custom back-end and dynamic UI.",
+          image: "assets/projects/personal-blog.webp",
+          techStack: [
+            "React JS",
+            "TypeScript",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "Express JS",
+            "MongoDB",
+          ],
+          demoLink: "",
+          githubLink: "",
+        },
+        {
+          id: "toko-kita",
+          title: "Toko Kita - E-Commerce",
+          description:
+            "A general online store offering a wide selection of products, featuring real-time order tracking for convenient shipment monitoring.",
+          image: "assets/projects/toko-kita.webp",
+          techStack: [
+            "React JS",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "Express JS",
+            "MongoDB",
+          ],
+          demoLink: "",
+          githubLink: "",
+        },
+      ];
+
+      const experiences = [
+        {
+          id: "exp-antara",
+          role: "Frontend Developer",
+          company: "Antara ETP (Remote)",
+          period: "Sep 2024 - Aug 2026",
+          techStack: [
+            ["Next.js", "nextjs/nextjs-original.svg"],
+            ["React.js", "react/react-original.svg"],
+            ["TypeScript", "typescript/typescript-original.svg"],
+            ["Tailwind CSS", "tailwindcss/tailwindcss-original.svg"],
+            ["Zustand", "assets/icons/zustand.svg"],
+            ["Socket.io", "socketio/socketio-original.svg"],
+            ["Radix UI", "assets/icons/radix-ui.svg"],
+            ["Git", "git/git-original.svg"],
+            ["Jira", "jira/jira-original.svg"],
+            ["Figma", "figma/figma-original.svg"],
+          ],
+          description: [
+            "Engineered 4 production frontend projects utilizing Next.js, React.js, TypeScript, Zustand, Socket.io, and Tailwind CSS, converting Figma wireframes into pixel-perfect, fully responsive web applications.",
+            "Developed and integrated a central Single Sign-On (SSO) system to seamlessly unify user authentication across 3 core company web platforms.",
+            "Integrated modern UI libraries including Radix UI to construct accessible, standardized design systems across client projects.",
+            "Diagnosed and resolved critical production bugs and performance bottlenecks, strengthening application stability and frontend rendering efficiency.",
+            "Partnered with cross-functional teams (Product Managers, Backend Developers, QA, DevOps) within bi-weekly Agile/Scrum sprints on Jira to ensure on-time delivery.",
+            "Maintained clean Git workflows, code reviews, and structured repository branching to facilitate seamless team collaboration.",
+          ],
+        },
+        {
+          id: "exp-eduwork",
+          role: "Fullstack Developer",
+          company: "Eduwork (Remote)",
+          period: "Aug 2023 - Jul 2024",
+          techStack: [
+            ["MongoDB", "mongodb/mongodb-original.svg"],
+            ["Express.js", "express/express-original.svg"],
+            ["React.js", "react/react-original.svg"],
+            ["Node.js", "nodejs/nodejs-original.svg"],
+            ["Redux Toolkit", "redux/redux-original.svg"],
+            ["Tailwind CSS", "tailwindcss/tailwindcss-original.svg"],
+          ],
+          description: [
+            "Developed 3 full-stack web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js), delivering end-to-end functionality from database schema to UI.",
+            "Architected secure RESTful APIs with Express.js and Node.js to enable reliable asynchronous data communication between client and server.",
+            "Built modular, scalable frontend state management using React.js and Redux Toolkit paired with Tailwind CSS for consistent cross-browser UI performance.",
+            "Authored thorough technical documentation and delivered interactive project presentations to align stakeholders on architecture decisions.",
+          ],
+        },
+        {
+          id: "exp-lapak-mumtaz",
+          role: "Fullstack Developer",
+          company: "Lapak Mumtaz (Hybrid)",
+          period: "Jun 2020 - Jun 2023",
+          techStack: [
+            ["MongoDB", "mongodb/mongodb-original.svg"],
+            ["Express.js", "express/express-original.svg"],
+            ["React.js", "react/react-original.svg"],
+            ["Node.js", "nodejs/nodejs-original.svg"],
+            ["Tailwind CSS", "tailwindcss/tailwindcss-original.svg"],
+            ["Git", "git/git-original.svg"],
+          ],
+          description: [
+            "Architected and deployed full-stack e-commerce web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js) to support daily business operations.",
+            "Designed and optimized MongoDB database schemas along with RESTful APIs to handle high-frequency product cataloging and transaction workflows.",
+            "Developed dynamic, user-friendly frontend interfaces using React.js and Tailwind CSS, improving overall site performance and accessibility.",
+            "Implemented JWT authentication, role-based access control (RBAC), and secure payment gateway integrations for reliable checkout processes.",
+            "Collaborated in a hybrid work environment to gather product requirements, maintain code repositories via Git, and perform continuous bug fixes.",
+          ],
+        },
+        {
+          id: "exp-ipb",
+          role: "Web Developer",
+          company: "Bogor Agricultural University (Internship)",
+          period: "Jun 2019 - Aug 2019",
+          techStack: [
+            ["PHP", "php/php-original.svg"],
+            ["Laravel", "laravel/laravel-original.svg"],
+            ["MySQL", "mysql/mysql-original.svg"],
+            ["Git", "git/git-original.svg"],
+            ["Trello", "trello/trello-plain.svg"],
+          ],
+          description: [
+            "Built a web-based document generation tool using PHP, Laravel, and MySQL to automate administrative forms for university students and faculty.",
+            "Executed software development lifecycle requirements using Waterfall methodology, Trello tracking, and Git version control.",
+          ],
+        },
+      ];
+
+      const escapeHtml = (value) =>
+        String(value).replace(
+          /[&<>"']/g,
+          (char) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            })[char],
+        );
+      const tags = (items, classes) =>
+        items
+          .map((item) => `<span class="${classes}">${escapeHtml(item)}</span>`)
+          .join("");
+      const iconImgUrl = (path) =>
+        path.startsWith("http") || path.startsWith("assets/")
+          ? path
+          : `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${path}`;
+
+      document.getElementById("services-grid").innerHTML = services
+        .map(
+          (service) => `
+        <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-900/80 hover:shadow-xl hover:shadow-blue-500/5">
+          <div>
+            <div class="flex items-center justify-between">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-800 bg-slate-950/80 transition-colors group-hover:border-sky-500/30 group-hover:bg-blue-600/10"><i data-lucide="${service.icon}" class="h-6 w-6 text-sky-400"></i></div>
+              <span class="text-sm font-semibold text-slate-500 group-hover:text-sky-400">${service.number}</span>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white transition-colors group-hover:text-sky-400">${escapeHtml(service.title)}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-400">${escapeHtml(service.description)}</p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2 border-t border-slate-800/50 pt-4">${tags(service.tags, "rounded-md border border-slate-800 bg-slate-950/60 px-2.5 py-1 text-xs font-medium text-slate-400 transition-colors group-hover:border-slate-700 group-hover:text-slate-300")}</div>
+        </div>
+      `,
+        )
+        .join("");
+
+      document.getElementById("skills-grid").innerHTML = skills
+        .map(
+          (group) => `
+        <div class="group flex flex-col items-center overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-900/80 hover:shadow-xl hover:shadow-blue-500/5">
+          <h3 class="mb-6 text-sm font-bold tracking-wider text-white transition-colors group-hover:text-sky-400">${escapeHtml(group.category)}</h3>
+          <div class="flex flex-wrap items-center justify-center gap-6">${group.skills
+            .map(
+              (skill) => `
+            <div class="flex flex-col items-center justify-center gap-2 text-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-800 bg-white/10 p-2.5 transition-colors group-hover:border-slate-700"><img src="${iconImgUrl(skill.icon)}" alt="${escapeHtml(skill.name)}" class="h-full w-full object-contain" loading="lazy"></div>
+              <span class="text-xs font-medium text-slate-300 transition-colors group-hover:text-white">${escapeHtml(skill.name)}</span>
+            </div>`,
+            )
+            .join("")}
+          </div>
+        </div>
+      `,
+        )
+        .join("");
+
+      document.getElementById("projects-grid").innerHTML = projects
+        .map(
+          (project, index) => `
+        <button type="button" data-project-index="${index}" class="group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/40 p-0 text-left backdrop-blur-sm transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-900/80 hover:shadow-xl hover:shadow-blue-500/5">
+          <div class="w-full">
+            <div class="aspect-video overflow-hidden border-b border-slate-800"><img src="${project.image}" alt="${escapeHtml(project.title)}" class="h-full w-full object-cover" loading="lazy"></div>
+            <div class="p-8 pb-4">
+              <div class="flex items-center justify-between gap-4"><h3 class="text-xl font-bold text-white transition-colors group-hover:text-sky-400">${escapeHtml(project.title)}</h3><i data-lucide="arrow-up-right" class="h-5 w-5 shrink-0 text-slate-600 transition-all group-hover:text-sky-400"></i></div>
+              <p class="mt-3 line-clamp-2 text-sm leading-relaxed text-slate-400">${escapeHtml(project.description)}</p>
+            </div>
+          </div>
+          <div class="mt-auto w-full p-8 pt-0"><div class="mt-6 flex flex-wrap gap-2.5 border-t border-slate-800/50 pt-6">${tags(project.techStack, "rounded-lg border border-slate-800 bg-slate-950/60 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors group-hover:border-slate-700 group-hover:text-white")}</div></div>
+        </button>
+      `,
+        )
+        .join("");
+
+      document.getElementById("experience-list").innerHTML = experiences
+        .map(
+          (experience) => `
+        <div class="group relative">
+          <div class="absolute top-1.5 -left-10 flex h-5 w-5 items-center justify-center rounded-full border-4 border-slate-950 bg-slate-800 transition-colors group-hover:border-slate-800 group-hover:bg-sky-400"><div class="h-1.5 w-1.5 rounded-full bg-slate-950 opacity-0 transition-opacity group-hover:opacity-100"></div></div>
+          <div class="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/40 p-8 backdrop-blur-sm transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-900/80 hover:shadow-xl hover:shadow-blue-500/5">
+            <div>
+              <div class="mb-6 flex flex-col justify-between gap-3 md:flex-row md:items-start">
+                <div><h3 class="text-xl font-bold text-white transition-colors group-hover:text-sky-400">${escapeHtml(experience.role)}</h3><p class="mt-1.5 flex items-center gap-2 text-sm font-medium text-slate-400"><i data-lucide="briefcase-business" class="h-4 w-4 text-slate-500"></i>${escapeHtml(experience.company)}</p></div>
+                <span class="flex items-center gap-2 rounded-full border border-sky-500/15 bg-blue-600/10 px-3.5 py-1 text-xs font-semibold text-sky-400 backdrop-blur-sm transition-colors group-hover:border-sky-500/30"><i data-lucide="calendar-days" class="h-3.5 w-3.5"></i>${escapeHtml(experience.period)}</span>
+              </div>
+              <div class="mb-6 flex flex-wrap gap-2.5 border-t border-slate-800/50 pt-6">${experience.techStack.map(([name, icon]) => `<div class="flex items-center gap-2 rounded-lg border border-slate-800 bg-slate-950/60 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors group-hover:border-slate-700 group-hover:text-white"><img src="${iconImgUrl(icon)}" alt="${escapeHtml(name)}" class="h-4 w-4 object-contain" loading="lazy"><span>${escapeHtml(name)}</span></div>`).join("")}</div>
+            </div>
+            <div class="mt-auto border-t border-slate-800/50 pt-6"><ul class="list-inside list-disc space-y-2.5 text-sm leading-relaxed text-slate-300 transition-colors group-hover:text-slate-200">${experience.description.map((description) => `<li class="marker:text-blue-500">${escapeHtml(description)}</li>`).join("")}</ul></div>
+          </div>
+        </div>
+      `,
+        )
+        .join("");
+
+      const dialog = document.getElementById("project-dialog");
+      const dialogBody = document.getElementById("dialog-body");
+      document
+        .getElementById("projects-grid")
+        .addEventListener("click", (event) => {
+          const card = event.target.closest("[data-project-index]");
+          if (!card) return;
+          const project = projects[Number(card.dataset.projectIndex)];
+          dialogBody.innerHTML = `
+          <div class="mb-6 aspect-video overflow-hidden rounded-xl border border-slate-800 bg-slate-950"><img src="${project.image}" alt="${escapeHtml(project.title)}" class="h-full w-full object-cover"></div>
+          <div class="mb-4 flex flex-col space-y-2"><h2 class="flex items-center gap-3 text-2xl font-extrabold text-white"><i data-lucide="layers-3" class="h-6 w-6 text-sky-400"></i>${escapeHtml(project.title)}</h2></div>
+          <p class="mb-8 text-sm leading-relaxed text-slate-300 md:text-base">${escapeHtml(project.description)}</p>
+          <div class="mb-8"><h3 class="mb-4 text-xs font-semibold tracking-wider text-slate-400 uppercase">Tech Stack</h3><div class="flex flex-wrap gap-2.5">${tags(project.techStack, "rounded-lg border border-slate-700 bg-slate-800 px-3.5 py-1.5 text-xs font-medium text-slate-200")}</div></div>
+          <div class="flex flex-wrap gap-4 border-t border-slate-800/80 pt-6">
+            ${project.demoLink ? `<a href="${project.demoLink}" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2.5 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:bg-blue-500 hover:shadow-blue-500/40"><i data-lucide="external-link" class="h-4 w-4"></i>Live Demo</a>` : ""}
+            ${project.githubLink ? `<a href="${project.githubLink}" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2.5 rounded-xl border border-slate-700 bg-slate-800 px-6 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-slate-600 hover:bg-slate-700 hover:text-white"><i class="fa-brands fa-github h-4 w-4"></i>GitHub</a>` : ""}
+          </div>`;
+          dialog.showModal();
+          lucide.createIcons();
+        });
+      document
+        .getElementById("dialog-close")
+        .addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuToggle.addEventListener("click", () => {
+        const open = menuToggle.getAttribute("aria-expanded") !== "true";
+        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute(
+          "aria-label",
+          open ? "Close navigation menu" : "Open navigation menu",
+        );
+        mobileMenu.classList.toggle("hidden", !open);
+        menuToggle.innerHTML = `<i data-lucide="${open ? "x" : "menu"}" class="h-6 w-6"></i>`;
+        lucide.createIcons();
+      });
+      document.querySelectorAll("[data-mobile-link]").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+          menuToggle.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+          lucide.createIcons();
+        });
+      });
+
+      const sections = [
+        ...document.querySelectorAll(
+          "#services, #expertise, #projects, #experience",
+        ),
+      ];
+      const updateActiveLink = () => {
+        const threshold = window.innerHeight * 0.25;
+        let active = "";
+        for (const section of sections) {
+          if (section.getBoundingClientRect().top < threshold)
+            active = `#${section.id}`;
+          else break;
+        }
+        document
+          .querySelectorAll("[data-nav-link], [data-mobile-link]")
+          .forEach((link) => {
+            const isActive = link.getAttribute("href") === active;
+            if (link.matches("[data-nav-link]")) {
+              link.classList.toggle("font-semibold", isActive);
+              link.classList.toggle("text-white", isActive);
+              link.classList.toggle("text-slate-400", !isActive);
+              link.classList.toggle("hover:text-slate-200", !isActive);
+              const underline = link.querySelector("[data-active-underline]");
+              if (isActive && !underline)
+                link.insertAdjacentHTML(
+                  "beforeend",
+                  '<span data-active-underline class="absolute bottom-0 left-0 h-[2.5px] w-full rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span>',
+                );
+              if (!isActive && underline) underline.remove();
+            } else {
+              link.classList.toggle("bg-blue-600/10", isActive);
+              link.classList.toggle("font-semibold", isActive);
+              link.classList.toggle("text-sky-400", isActive);
+              link.classList.toggle("text-slate-300", !isActive);
+              link.classList.toggle("hover:bg-slate-800", !isActive);
+              link.classList.toggle("hover:text-white", !isActive);
+              let dot = link.querySelector("[data-active-dot]");
+              if (isActive && !dot)
+                link.insertAdjacentHTML(
+                  "beforeend",
+                  '<span data-active-dot class="h-1.5 w-1.5 rounded-full bg-blue-500"></span>',
+                );
+              if (!isActive && dot) dot.remove();
+            }
+          });
+      };
+      updateActiveLink();
+      window.addEventListener("scroll", updateActiveLink, { passive: true });
+
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
